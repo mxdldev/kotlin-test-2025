@@ -12,4 +12,5 @@ class Test {
 
 fun main(args: Array<String>) {
     println("ok")
+    println("ok")
 }
