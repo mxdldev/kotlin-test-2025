@@ -8,14 +8,31 @@ package com.example.kotlin.test
  * Update:     <br>
  */
 fun main(args: Array<String>) {
-    val bookNames = listOf(Book("平凡的世界"), Book("玉观音")).map(Book::name)
-    val bookNames1 = listOf(Book("平凡的世界"), Book("玉观音")).map { it.name }
+    //将集合中Book对象的name属性过滤
+    val bookNames = listOf(Book("pingfan"), Book("yuguanyin")).map(Book::name)
+    //将集合中Book对象的name属性过滤
+    val bookNames1 = listOf(Book("pingfan"), Book("yuguanyin")).map { it.name }
+    //Book::name的本质是个函数
     println(bookNames)
     println(bookNames1)
 
-    val book = Book("百年孤独")
+    val book = Book("bainiangudu")
     println(book::name.invoke())
     val getName = Book::name
     println(getName(book))
+
+    val t = Book::test
+    t(book,3)
+
+    val book1 = Book("xiyouji")
+    println(book1.name)
+    book1.name = "hongloumeng"
+    println(book1.name)
+
+
 }
-data class Book(val name:String)
+data class Book(var name:String){
+    fun test(a:Int){
+        println(a)
+    }
+}
