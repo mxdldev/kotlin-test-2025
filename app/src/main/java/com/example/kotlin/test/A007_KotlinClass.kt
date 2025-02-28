@@ -72,3 +72,12 @@ class MainActivity : Activity() {
         }
     }
 }
+interface Flyer{
+    val height:Int get() = 1000
+    fun fly(){
+        println("ok")
+    }
+}
+
+fun main(args: Array<String>) {
+}
