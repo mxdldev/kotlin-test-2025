@@ -24,4 +24,10 @@ fun main() {
     println(triple.first)
     println(triple.second)
     println(triple.third)
+
+    val p = 1 to 2
+    println(p.first)
+    println(p.second)
+    val listOf = listOf(1, 2, 3)
+    val map = mapOf(1 to 2, 2 to 3,p)
 }
