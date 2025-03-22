@@ -11,5 +11,30 @@ class Test {
 }
 
 fun main(args: Array<String>) {
-    println("ok")
+   val t = html {
+        body()
+        t()
+    }
+    println("============================")
+    t()
+}
+
+fun t() {
+    val str:String? = null
+    str.let{
+        print(it?.length)
+        print("ok")
+    }
+}
+
+class Html {
+    fun body() {
+        println("ok")
+    }
+}
+
+fun html(init: Html.() -> Unit): Html {
+    val html = Html()
+    html.init()
+    return html
 }
