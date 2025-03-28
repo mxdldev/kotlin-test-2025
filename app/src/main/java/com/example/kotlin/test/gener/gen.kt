@@ -7,6 +7,7 @@ package com.example.kotlin.test.gener
  * Version:     V1.0.0<br>
  * Update:     <br>
  */
+/*
 interface Customer<in T>{
     fun produce():T
 }
@@ -30,4 +31,4 @@ val stringProducer:Produce<String> = object:Produce<String>{
     override fun customer(t: String) {
         println(t.length)
     }
-}
+}*/
